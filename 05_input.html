@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>인풋과 폼</title>
+    <title>Input</title>
   </head>
   <body>
     <form id="myForm" style="padding: 24px">
@@ -32,6 +32,19 @@
       <label for="formLongText">자기소개 :</label>
       <textarea id="formLongText"></textarea>
       <!-- 중간에 노드가 안 낌 -->
+      <!-- checkbox, radio, select -->
+      <input type="checkbox" id="check" /><label>제출여부</label>
+      <br />
+      <select id="pet">
+        <option>강아지</option>
+        <option>고양이</option>
+        <option>햄스터</option>
+      </select>
+      <select id="pet2">
+        <option value="1">강아지</option>
+        <option value="2">고양이</option>
+        <option value="3">햄스터</option>
+      </select>
     </form>
     <button id="inputBtn">인풋 테스트용 버튼</button>
     <script>
@@ -44,6 +57,11 @@
         console.log("nameInput", nameInput.value);
         console.log("passwordInput", passwordInput.value);
         console.log("longTextInput", longTextInput.value);
+        //check box는 checked로 값을 확인
+        console.log(document.querySelector("#check").checked); // true, false로 반환
+        console.log(document.querySelector("#pet").value);
+        console.log(document.querySelector("#pet2").value);
+        // input에서 들어오는 값은 checked를 제외하고 일반적으로는 string
       });
     </script>
   </body>
